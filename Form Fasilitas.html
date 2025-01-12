@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Populer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .hotel-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .hotel-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      width: 30%;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 200px; 
+      object-fit: cover; 
+    }
+
+    .hotel-card h3 {
+      margin: 10px 0;
+    }
+
+    .hotel-card p {
+      color: #777;
+    }
+
+    .hotel-card .price {
+      font-size: 1.5em;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .hotel-card a {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 10px 20px;
+      background: #6c63ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .hotel-card a:hover {
+      background: #5753c9;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__logo">ANKHOTEL.COM</div>
+    <ul class="nav__links">
+      <li class="link"><a href="Desain Web.html">Kembali</a></li>
+      <li class="link"><a href="Form Pemesanan.html">Pesan Sekarang</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Fasilitas Hotel</h1>
+    <div class="hotel-grid">
+      <div class="hotel-card">
+        <img src="Asset/aula.jpg" alt="Aula">
+        <h3>Aula</h3>
+        <p>Tersedia Aula</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/gym.jpg" alt="GYM">
+        <h3>GYM</h3>
+        <p>Tersedia GYM dengan alat yang lengkap</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/parkir.jpg" alt="Parkiran">
+        <h3>Parkiran</h3>
+        <p>Ada parkiran untuk mobil dan motor</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/breakfast-5204352.jpg" alt="Aula">
+        <h3>Sarapan</h3>
+        <p>Tersedia Sarapan di restoran</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/relaxation-3065577.jpg" alt="Spa">
+        <h3>SPA</h3>
+        <p>Tersedia fasilitas Spa</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/restaurant-1837150.jpg" alt="Restoran">
+        <h3>Restoran</h3>
+        <p>Tersedia Restoran bagi pengunjung</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/aula (2).jpg" alt="Aula">
+        <h3>Aula santai</h3>
+        <p>Tersedia aula untuk bersantai dengan keluarga</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/pool-5055009.jpg" alt="Kolam Renang">
+        <h3>Kolam Renang</h3>
+        <p>Tersedia Kolam Renang</p>
+      </div>
+      <div class="hotel-card">
+        <img src="Asset/view.jpg" alt="Pemandangan">
+        <h3>View balkon</h3>
+        <p>Ada view balkon yang cantik</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

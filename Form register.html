@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("Asset/volcano-3779159.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3855;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333333;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #2c3855;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #435681;
+    }
+  </style>
+  <script>
+    // Function to change the background image
+    function changeBackground() {  // Baris ke-56
+      const selectedImage = document.getElementById("backgroundSelect").value;
+      document.body.style.backgroundImage = `url(${selectedImage})`;
+    }
+
+    // Function to validate the form and ensure all fields are filled
+    function validateRegisterForm(event) {  // Baris ke-61
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (username === "" || password === "" || confirmPassword === "" || email === "") {
+        alert("Semua field wajib diisi!");
+        event.preventDefault();
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Password dan konfirmasi password tidak cocok!");
+        event.preventDefault();
+        return false;
+      }
+
+      return true;
+    }
+
+    
+    function checkFieldsBeforeBack(event) {  // Baris ke-77
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (username === "" || password === "" || confirmPassword === "" || email === "") {
+        alert("Semua field wajib diisi sebelum kembali!");
+        event.preventDefault();
+        return false;
+      }
+
+      window.history.back();
+    }
+  </script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>REGISTER</h1>
+    <form onsubmit="validateRegisterForm(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <label for="confirmPassword">Konfirmasi Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <button class="btn-back" type="submit" onclick="checkFieldsBeforeBack(event)">Register</button>
+      <button type="button" class="btn-back" onclick="window.history.back()">Kembali</button> 
+    </form>
+  </div>
+</body>
+
+</html>
